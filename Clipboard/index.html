@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clipboard</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <div class="flex items-center align-center h-screen justify-center">
+      <div class="w-[600px] h-[500px] rounded-2xl shadow-lg bg-gray-100 p-5">
+        <div class="text-3xl font-bold text-center font-sans text-red-500">Enter text below to copy </div>
+        <section class="bg-gray-100">
+          <div class="mx-auto max-w-screen-xl px-4 py-10 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
+              <div
+                class="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12"
+              >
+                <div class="space-y-4">
+                  <div>
+                    <label class="sr-only" for="message">Message</label>
+                    <textarea
+                      class="border-solid border-2 w-full rounded-lg border-gray-200 p-3 text-sm"
+                      placeholder="Message"
+                      rows="8"
+                      id="message"
+                    ></textarea>
+                  </div>
+
+                  <div class="mt-4">
+                    <button
+                      id="copyToClipboard"
+                      class="inline-flex w-full items-center justify-center rounded-lg bg-black px-5 py-3 text-white sm:w-auto"
+                    >
+                      <span class="font-medium"> Copy to clipboard </span>
+                    </button>
+                    <button
+                      id="reset"
+                      class="inline-flex w-full items-center justify-center rounded-lg bg-red-400 px-5 py-3 text-white sm:w-auto"
+                    >
+                      <span class="font-medium"> Reset </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="./clipboard.js"></script>
+  </body>
+</html>
